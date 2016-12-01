@@ -1,0 +1,8 @@
+.gifButton:hover {
+	color: red;
+}
+
+button, #add-topics {
+	background-color: aqua;
+	border-radius: 5px;
+}
