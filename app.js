@@ -1,5 +1,5 @@
 // Initial array of movies
-var topics = ["computers", "coding", "engineering", "technology", "music", "Pentatonix", "drums", "The Walking Dead", "TWD", "guitars", "photography", "iot", "cats", "comedy", "family", "science", "technology", "Doctor Who", "sci-fi"];
+var topics = ["computers", "coding", "engineering", "technology", "music", "Pentatonix", "drums", "The Walking Dead", "TWD", "guitars", "photography", "iot", "cats", "comedy", "family", "Jesus", "science", "technology", "Doctor Who", "sci-fi"];
 
 // Generic function for displaying movie data 
 function renderButtons(){ 
