@@ -8,31 +8,37 @@
 </head>
 <body>
 
-	<div class="page-header">
+	<div class="header text-center">
+		<h1>Pick your favorite Disney animated movie</h1>
 		<!-- Buttons will show here -->
-		<div id="topics-buttons">
-		</div>
+		<div id="topics-buttons"></div>
 	</div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-8">
-			<!-- Gifs will appear here -->
-				<div id="gifs-appear-here">
-			
-				</div>
-			</div>
-			<div class="col-md-4">
-			<!-- Form to add new buttons will appear here -->
-				<form id="topics-form">
-					<label for="topics-input">Add a topic of choice</label> <br>
-					<input class="container-fluid" type="text" id="topics-input"> <br>
-					<input id="add-topics" type="submit" name="Submit">
-				</form>
-			</div>
-		</div>
+	<div class="container text-center">
+		<br>
+		<!-- Form to add new buttons will appear here -->
+		<form id="topics-form">
+			<label for="topics-input">Not on the list? Type it in:</label> 
+			<input class="container-fluid text-center" type="text" id="topics-input"> <br><br>
+			<input id="add-topics" type="submit" name="Submit">
+		</form>
+		
+	</div>
+	
+
+	<div class="container text-center">
+		<br><br>
+		<!-- Gifs will appear here -->
+		<h6>Click image to toggle GIF animation</h6>
+		<div id="gifs-appear-here"></div>
 	</div>
 
+	<!-- Footer container -->
+	<div id="footer" class="text-center">
+	  	<div class="container">
+	  	  <p class="text-muted">&copy; 2016 Ysa Tan </p>
+	  	</div>
+	</div>
 
 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="docs/app.js"></script>

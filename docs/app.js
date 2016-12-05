@@ -1,13 +1,14 @@
-// Initial array of movies
-var topics = ["computers", "coding", "engineering", "technology", "music", "Pentatonix", "drums", "The Walking Dead", "TWD", "guitars", "photography", "iot", "cats", "comedy", "family", "Jesus", "science", "technology", "Doctor Who", "sci-fi"];
+// Initial array of topics
+var topics = ["The Lion King", "Cinderella", "Aladdin", "Beauty and the Beast", "The Little Mermaid", "Finding Nemo", "Toy Story", 
+			"Tangled", "Spirited Away", "Monsters Inc", "Big Hero 6", "Inside Out", "Up", "Mulan", "Frozen" ];
 
-// Generic function for displaying movie data 
+// Generic function for displaying topic data 
 function renderButtons(){ 
 
-	// Deletes the movies prior to adding new movies (this is necessary otherwise you will have repeat buttons)
+	// Deletes the topics prior to adding new topics (this is necessary otherwise you will have repeat buttons)
 	$('#topics-buttons').empty();
 
-	// Loops through the array of movies
+	// Loops through the array of topics
 	for (var i = 0; i < topics.length; i++){
 	    //Dynamically generate buttons for each topic in the array
 	    $("#topics-buttons").append("<button class='gifButton' data-button='" + topics[i] +"'>" + topics[i] + "</button>");
@@ -20,7 +21,7 @@ $('#add-topics').on('click', function(){
 	// This line of code will grab the input from the textbox
 	var newTopic = $('#topics-input').val().trim();
 
-	// The movie from the textbox is then added to our array
+	// The topic from the textbox is then added to our array
 	topics.push(newTopic);
 	
 	// Our array then runs which handles the processing of our topics array
@@ -43,7 +44,7 @@ $(document).on("click", ".gifButton", function() {
 	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
     buttonClicked + "&api_key=dc6zaTOxFJmzC&limit=10"; //first 10 items
 	
-	// Creates AJAX call for the specific movie being 
+	// Creates AJAX call for the specific topic being 
 	$.ajax({
 		url: queryURL, 
 		method: 'GET'}).done(function(response) {
@@ -60,7 +61,7 @@ $(document).on("click", ".gifButton", function() {
 			// Only taking action if the photo has an appropriate rating
 			if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
 				// Creating a div with the class "item"
-				var gifDiv = $("<span class='item'>");
+				var gifDiv = $("<div class='item'>");
 
 				// Storing the result item's rating
 				var rating = results[i].rating;

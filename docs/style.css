@@ -1,8 +1,27 @@
+body {
+	background: url("../docs/disney-pastel.jpg");
+}
+
+@font-face {
+    font-family: 'Waltograph', "Helvetica", Calibri, sans-serif;
+    src: url("../docs/waltograph42.ttf");
+}
+
+h1 {
+	font-family: 'Waltograph'; 
+}
+
 .gifButton:hover {
 	color: red;
 }
 
 button, #add-topics {
-	background-color: mediumaquamarine;
+	background-color: lightblue;
 	border-radius: 5px;
 }
+
+.item {
+	display: inline-block;
+	margin: 2px;
+}
+
