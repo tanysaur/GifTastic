@@ -1,9 +1,9 @@
 // Initial array of topics
-var topics = ["The Lion King", "Cinderella", "Aladdin", "Beauty and the Beast", "The Little Mermaid", "Finding Nemo", "Toy Story", 
+var topics = ["The Lion King", "Cinderella", "Aladdin", "Beauty and the Beast", "The Little Mermaid", "Finding Nemo", "Toy Story",
 			"Tangled", "Spirited Away", "Monsters Inc", "Big Hero 6", "Inside Out", "Up", "Mulan", "Frozen" ];
 
-// Generic function for displaying topic data 
-function renderButtons(){ 
+// Generic function for displaying topic data
+function renderButtons(){
 
 	// Deletes the topics prior to adding new topics (this is necessary otherwise you will have repeat buttons)
 	$('#topics-buttons').empty();
@@ -23,7 +23,7 @@ $('#add-topics').on('click', function(){
 
 	// The topic from the textbox is then added to our array
 	topics.push(newTopic);
-	
+
 	// Our array then runs which handles the processing of our topics array
 	renderButtons();
 
@@ -40,13 +40,13 @@ $(document).on("click", ".gifButton", function() {
   	 var buttonClicked = $(this).data("button");
 
 	console.log(buttonClicked);
-	
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
     buttonClicked + "&api_key=dc6zaTOxFJmzC&limit=10"; //first 10 items
-	
-	// Creates AJAX call for the specific topic being 
+
+	// Creates AJAX call for the specific topic being
 	$.ajax({
-		url: queryURL, 
+		url: queryURL,
 		method: 'GET'}).done(function(response) {
 
 		// Storing an array of results in the results variable
@@ -83,7 +83,7 @@ $(document).on("click", ".gifButton", function() {
 				// Appending the paragraph and personImage we created to the "gifDiv" div we created
 				gifDiv.append(personImage);
 				gifDiv.append(p);
-				
+
 				// Prepending the gifDiv to the "#gifs-appear-here" div in the HTML
 				$("#gifs-appear-here").prepend(gifDiv);
         	}
@@ -111,8 +111,7 @@ $(document).on("click", ".gif", function() {
 renderButtons();
 
 //References:
-//Were taken mostly from class activites: 
+//Were taken mostly from class activites:
 //2-buttontriggered-ajax
 //3-dynamic-elements
 //4-pausing-gifs
-
